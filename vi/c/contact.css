@@ -1,0 +1,66 @@
+:root {
+    --trot: 15s;
+}
+
+.contact, .rotate {
+    position: absolute;
+    left: 50%;
+    top: 60vh;
+    transform: translate(-50%,-50%);
+    width: max-content;
+}
+
+.rotate {
+    width: 80vw;
+    height: 80vh;
+    max-width: 80vh;
+    max-height: 80vw;
+    aspect-ratio: 1/1;
+    display: grid;
+    animation: var(--trot) linear infinite rotation;
+    transform-origin: center;
+    justify-items: center;
+    align-items: center;
+    pointer-events: none;
+}
+.rotate * {
+    animation: var(--trot) linear infinite conterRotation;
+    transform-origin: center;
+    width: max-content;
+    height: max-content;
+    pointer-events: all;
+    padding: 40px;
+}
+#mail {
+    grid-row: 1;
+    grid-column: 2;
+}
+#tel {
+    grid-row: 3;
+    grid-column: 2;
+}
+#insta {
+    grid-row: 2;
+    grid-column: 1;
+}
+#github {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+@keyframes rotation {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+@keyframes conterRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

@@ -1,0 +1,127 @@
+body,html {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+* {
+    cursor: none;
+}
+
+:root {
+    --t: 25s;
+}
+
+nav {
+    height: 10vh;
+    width: 100vw;
+    background-color: #cfc;
+    display: flex;
+    align-items: center;
+    animation: var(--t) linear colorb infinite, var(--t) linear color2 infinite;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.right {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.body {
+    height: 90vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    animation: var(--t) linear colorb2 infinite,var(--t) linear color infinite ;
+}
+.body::-webkit-scrollbar {
+    display: none;
+}
+
+#mouse, #mouselerp {
+    pointer-events: none;
+    color: #0f0;
+    aspect-ratio: 1/1;
+}
+
+#mouse {
+    height: 10px;
+    border-radius: 50%;
+    background-color: currentColor;
+    z-index: 5555556;
+    transition: 0.05s linear;
+    position: fixed;
+    transform: translate(-50%,-50%);
+}
+
+#mouselerp {
+    height: 30px;
+    border-radius: 50%;
+    z-index: 5555556;
+    transition: 0.15s linear;
+    position: fixed;
+    border: 5px solid currentColor;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes colorb2 {
+    0% {
+        background:#fdd ;
+    }
+    33% {
+        background:#dfd ;
+    }
+    66% {
+        background:#ddf ;
+    }
+    100% {
+        background:#fdd ;
+    }
+}
+@keyframes colorb {
+    0% {
+        background:#339 ;
+    }
+    33% {
+        background:#933 ;
+    }
+    66% {
+        background:#393 ;
+    }
+    100% {
+        background:#339 ;
+    }
+}
+@keyframes color2 {
+    0% {
+        color:#fdd;
+    }
+    33% {
+        color:#dfd;
+    }
+    66% {
+        color:#ddf;
+    }
+    100% {
+        color:#fdd;
+    }
+}
+@keyframes color {
+    0% {
+        color:#339;
+    }
+    33% {
+        color:#933;
+    }
+    66% {
+        color:#393;
+    }
+    100% {
+        color:#339;
+    }
+}
