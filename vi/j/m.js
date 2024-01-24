@@ -2,6 +2,9 @@ function cp(p,a) {
   if (page === p) {
     return;
   }
+  gAPI(p,a,document.getElementsByClassName("body")[0]);
+}
+function gAPI(p,a,n) {
   const xhr = new XMLHttpRequest();
   r = "./index.php?api&action="+p;
   a.forEach(e => {
@@ -10,23 +13,23 @@ function cp(p,a) {
   xhr.open("GET",r);
   xhr.send();
   xhr.responseType = "json";
+  let data="";
   xhr.onload = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      const data = xhr.response;
-      var range = document.createRange();
-      let b= document.getElementsByClassName("body")[0];
-      range.selectNode(b);
-      var documentFragment = range.createContextualFragment(data["page"]);
-      b.innerHTML = "";
-      b.appendChild(documentFragment);
+      data = xhr.response;
+      aP(n,data["page"]);
     } else {
       console.log(`Error: ${xhr.status}`);
     }
   };
 }
-
-
-
+function aP(node,p) {
+  var range = document.createRange();
+  range.selectNode(node);
+  var documentFragment = range.createContextualFragment(p);
+  node.innerHTML = "";
+  node.appendChild(documentFragment);
+}
 document.querySelector('body').addEventListener('mousemove', mouse);
 function mouse() {
   document.getElementById('mouse').style.left = event.pageX + 'px';
@@ -38,7 +41,6 @@ function mouse() {
     clicable.addEventListener('mouseout', nohover);
   });
 }
-
 function nohover () {
   document.getElementById('mouselerp').style.height = 30 + 'px';
   document.getElementById('mouselerp').style.padding = 0 + 'px';

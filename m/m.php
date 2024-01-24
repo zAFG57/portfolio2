@@ -11,9 +11,9 @@ class m {
     private function __construct() {
         global $baseDir;
         $this->api = isset($_REQUEST["api"]);
+        $this->p = $_REQUEST["params"] ?? [];
         $this->a = $_REQUEST["action"] ?? $_SESSION["action"] ??"defhome";
         $_SESSION["action"] = $this->a;
-        $this->p = $_REQUEST["params"] ?? [];
         $this->l = $_REQUEST["lang"] ?? $_SESSION["lang"] ?? "fr";
         $dir = $baseDir . "/asset/l/";
         if (!file_exists($dir . $this->l .".json")) {

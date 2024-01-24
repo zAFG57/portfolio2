@@ -68,3 +68,14 @@
         transform: translateX(-100%);
     }
 }
+#subPage {
+    position: absolute;
+    height: 90vh;
+    width: 100vw;
+    top: 10vh;
+    left: 100vw;
+    transition: 0.25s ease-in-out;
+    z-index: 2;
+    background-color: var(--cp);
+    color: var(--bcp);
+}
