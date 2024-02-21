@@ -1,5 +1,5 @@
 :root {
-    --bcp: var(--1);
+    --bcp: var(--2);
     --cp: var(--3);
     --cars: 2em;
 }
@@ -76,7 +76,7 @@
     width: 100vw;
     top: 10vh;
     left: 100vw;
-    transition: 0.25s ease-in-out;
+    transition: 0.25s left ease-in-out;
     z-index: 2;
     background-color: var(--cp);
     color: var(--bcp);
@@ -101,6 +101,15 @@
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 4em;
+    margin: 0px;
+    padding: 0px;
+}
+.projetVid iframe {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
 }
 .description {
     padding: 50px;
@@ -121,4 +130,16 @@
     text-align: center;
     border-radius: 50000px;
     list-style-type: none;
+}
+#retour {
+    position: fixed;
+    top: 15vh;
+    left: 5vw;
+    border: 1px solid currentColor;
+    border-radius: 50000px;
+    padding: 20px;
+    background-color: var(--3);
+    color: var(--2);
+    z-index: 3;
+    transition: left 0.25s ease-in-out;
 }

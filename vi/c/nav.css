@@ -6,16 +6,16 @@ body,html {
 
 * {
     cursor: none;
+    transition: color 0.15s, background-color 0.15s;
 }
 
 nav {
     height: 10vh;
     width: 100vw;
-    background-color: #cfc;
     display: flex;
     align-items: center;
     color: var(--1);
-    background-color: var(--2);
+    background-color: var(--1);
 }
 
 .left {
@@ -34,8 +34,8 @@ nav {
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: var(--1);
-    color: var(--2);
+    background-color: var(--2);
+    color: var(--3);
 }
 .body::-webkit-scrollbar {
     display: none;

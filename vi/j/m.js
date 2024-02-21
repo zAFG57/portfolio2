@@ -1,3 +1,5 @@
+let nbColor =5;
+
 function cp(p,a) {
   if (page === p) {
     return;
@@ -57,7 +59,7 @@ function rInt(max) {
 document.addEventListener("click",click );
 function click(event) {
   console.log(event.clientX, event.clientY);
-  fetch('./vi/c/json/'+(rInt(2)+1)+".json").then(json => json.json()).then(data => {
+  fetch('./vi/c/json/'+(rInt(nbColor)+1)+".json").then(json => json.json()).then(data => {
     document.querySelector("#css").innerHTML = data["css"];
   });
 
