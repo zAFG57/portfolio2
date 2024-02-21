@@ -1,6 +1,6 @@
 :root {
-    --bcp: #244;
-    --cp: #fde;
+    --bcp: var(--1);
+    --cp: var(--3);
     --cars: 2em;
 }
 
@@ -70,6 +70,8 @@
 }
 #subPage {
     position: absolute;
+    overflow: hidden;
+    overflow-y: scroll;
     height: 90vh;
     width: 100vw;
     top: 10vh;
@@ -78,4 +80,45 @@
     z-index: 2;
     background-color: var(--cp);
     color: var(--bcp);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#subPage::-webkit-scrollbar {
+    display: none;
+}
+
+.projetVid {
+    width: 100vw;
+    max-width: calc(16 * calc(90vh / 9));
+    aspect-ratio: 16/9;
+    margin-left: auto;
+    margin-right: auto;
+}
+.projetVid h2 {
+    position: relative;
+    width: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4em;
+}
+.description {
+    padding: 50px;
+    font-size: 1.5em;
+}
+.technologie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.technologie ul {
+    margin-bottom: 50px;
+}
+.technologie ul li {
+    margin-top: 50px;
+    border: 1px solid currentColor;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50000px;
+    list-style-type: none;
 }

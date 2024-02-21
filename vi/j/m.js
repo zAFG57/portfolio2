@@ -51,3 +51,14 @@ function hover () {
   document.getElementById('mouselerp').style.padding = 50 + 'px';
   document.getElementById('mouselerp').style.border = 1 + 'px solid currentColor';
 }
+function rInt(max) {
+  return Math.floor(Math.random() * max);
+}
+document.addEventListener("click",click );
+function click(event) {
+  console.log(event.clientX, event.clientY);
+  fetch('./vi/c/json/'+(rInt(2)+1)+".json").then(json => json.json()).then(data => {
+    document.querySelector("#css").innerHTML = data["css"];
+  });
+
+}

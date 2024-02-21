@@ -8,17 +8,14 @@ body,html {
     cursor: none;
 }
 
-:root {
-    --t: 25s;
-}
-
 nav {
     height: 10vh;
     width: 100vw;
     background-color: #cfc;
     display: flex;
     align-items: center;
-    animation: var(--t) linear colorb infinite, var(--t) linear color2 infinite;
+    color: var(--1);
+    background-color: var(--2);
 }
 
 .left {
@@ -37,7 +34,8 @@ nav {
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    animation: var(--t) linear colorb2 infinite,var(--t) linear color infinite ;
+    background-color: var(--1);
+    color: var(--2);
 }
 .body::-webkit-scrollbar {
     display: none;
@@ -67,61 +65,4 @@ nav {
     position: fixed;
     border: 5px solid currentColor;
     transform: translate(-50%,-50%);
-}
-
-@keyframes colorb2 {
-    0% {
-        background:#fdd ;
-    }
-    33% {
-        background:#dfd ;
-    }
-    66% {
-        background:#ddf ;
-    }
-    100% {
-        background:#fdd ;
-    }
-}
-@keyframes colorb {
-    0% {
-        background:#339 ;
-    }
-    33% {
-        background:#933 ;
-    }
-    66% {
-        background:#393 ;
-    }
-    100% {
-        background:#339 ;
-    }
-}
-@keyframes color2 {
-    0% {
-        color:#fdd;
-    }
-    33% {
-        color:#dfd;
-    }
-    66% {
-        color:#ddf;
-    }
-    100% {
-        color:#fdd;
-    }
-}
-@keyframes color {
-    0% {
-        color:#339;
-    }
-    33% {
-        color:#933;
-    }
-    66% {
-        color:#393;
-    }
-    100% {
-        color:#339;
-    }
 }
