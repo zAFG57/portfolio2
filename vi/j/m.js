@@ -1,4 +1,4 @@
-let nbColor =5;
+let nbColor =6;
 
 function cp(p,a) {
   if (page === p) {
@@ -26,11 +26,27 @@ function gAPI(p,a,n) {
   };
 }
 function aP(node,p) {
-  var range = document.createRange();
+  let range = document.createRange();
   range.selectNode(node);
-  var documentFragment = range.createContextualFragment(p);
-  node.innerHTML = "";
-  node.appendChild(documentFragment);
+  let documentFragment = range.createContextualFragment(p);
+  if (node != document.getElementsByClassName("body")[0]) {
+    node.innerHTML = "";
+    node.appendChild(documentFragment);
+    return;
+  }
+
+  let tr = document.getElementsByClassName("transitionPage")[0];
+  tr.innerHTML = "";
+  tr.appendChild(documentFragment);
+  tr.style.transition = "1.5s ease-in-out transform";
+  tr.style.transform = "rotateX(0deg)";
+  setTimeout(()=>{
+    node.style.transition = "0s ease-in-out transform";
+    node.style.transform = "rotateX(90deg)";
+    node.className = "transitionPage";
+    tr.className = "body";
+    node.innerHTML = "";
+  },1500);
 }
 document.querySelector('body').addEventListener('mousemove', mouse);
 function mouse() {
@@ -58,9 +74,15 @@ function rInt(max) {
 }
 document.addEventListener("click",click );
 function click(event) {
-  console.log(event.clientX, event.clientY);
+  let div = document.createElement("div");
+  div.classList.add("clickCircle");
+  document.querySelector("body").appendChild(div);
+  setTimeout(()=>{div.style.left = event.clientX + "px";div.style.top = event.clientY + "px";div.style.height = "50vh";div.style.width = "50vh";div.style.opacity = "0";},10)
+  setTimeout(()=>{div.remove();},500);
   fetch('./vi/c/json/'+(rInt(nbColor)+1)+".json").then(json => json.json()).then(data => {
     document.querySelector("#css").innerHTML = data["css"];
   });
-
 }
+fetch('./vi/c/json/'+(rInt(nbColor)+1)+".json").then(json => json.json()).then(data => {
+  document.querySelector("#css").innerHTML = data["css"];
+});

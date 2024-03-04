@@ -12,11 +12,15 @@ ob_start();
 
 
 <section class="projetSec">
-    <h1 class="titre">
-        Projet Univercitaire
-    </h1>
+    <div class="titre">
+        <h1>
+            Projet Univercitaire
+        </h1>
+    </div>
+    
 
     <div class="projet h" onclick="sp('3DMino',[])">
+        <iframe src="https://www.youtube.com/embed/nWMjo6WeO6w?rel=0&controls=0&showinfo=0&autoplay=1&mute=1" allow="autoplay *"></iframe>
         <div class="caroselle">
             <?php
                 for ($i=0; $i <2; $i++) { 
@@ -32,11 +36,15 @@ ob_start();
 </section>
 
 <section class="projetSec">
-    <h1 class="titre">
-        Projet personelle
-    </h1>
+    <div class="titre">
+        <h1>
+            Projet personelle
+        </h1>
+    </div>
+    
 
     <div class="projet h" onclick="sp('reparation',[])">
+        <iframe src="https://www.youtube.com/embed/nWMjo6WeO6w?rel=0&controls=0&showinfo=0&autoplay=1&mute=1" allow="autoplay *"></iframe>
         <div class="caroselle">
             <?php
                 for ($i=0; $i <2; $i++) { 
@@ -51,6 +59,7 @@ ob_start();
     </div>
 
     <div class="projet h" onclick="sp('youtube',[])">
+        <iframe src="https://www.youtube.com/embed/nWMjo6WeO6w?rel=0&controls=0&showinfo=0&autoplay=1&mute=1" allow="autoplay *"></iframe>
         <div class="caroselle">
             <?php
                 for ($i=0; $i <2; $i++) { 
@@ -64,6 +73,7 @@ ob_start();
         </div>
     </div>
 </section>
+
 
 <section id="subPage">
     

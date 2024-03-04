@@ -25,3 +25,4 @@
 <div id="mouse"></div>
 <div id="mouselerp"></div>
 <div id="css"></div>
+<div class="transitionPage"></div>

@@ -12,26 +12,31 @@
 }
 .projetSec .titre {
     position: relative;
-    width: calc(100vw - 4px);
-    background-color: var(--cp);
-    color: var(--bcp);
+    width: 100vw;
+    background-color: var(--bcp);
+    color: var(--cp);
     text-align: center;
-    padding: 1em;
-    margin: 0px;
-    text-decoration: underline solid currentColor;
     font-size: 2em;
     position: sticky;
     top: 0px;
     z-index: 2;
 }
+.projetSec .titre h1 {
+    padding: 0.5em;
+    margin: 0px 10vw 0px 10vw;
+    border-bottom: 5px solid currentColor;
+    border-radius: 2px;
+}
 
 
 .projet {
+    overflow: hidden;
     width: 500px;
     transform: translate(50px,50px);
-    aspect-ratio: 160/99;
+    aspect-ratio: 160/103;
+    background-color: var(--3);
     box-shadow: 0px 0px 0px 2px currentColor;
-    transition: 0.25s ease-in-out;
+    transition: box-shadow 0.25s ease-in-out;
 }
 .projet:hover {
     box-shadow: 0px 0px 0px 5px currentColor;
@@ -40,8 +45,6 @@
     position: relative;
     width: 100%;
     height: 10%;
-    top: 100%;
-    transform: translateY(-100%);
     overflow: hidden;
     display: flex;
     background-color: var(--cp);
@@ -77,9 +80,9 @@
     top: 10vh;
     left: 100vw;
     transition: 0.25s left ease-in-out;
-    z-index: 2;
-    background-color: var(--cp);
-    color: var(--bcp);
+    z-index: 8;
+    background-color: var(--bcp);
+    color: var(--cp);
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -90,26 +93,31 @@
 .projetVid {
     width: 100vw;
     max-width: calc(16 * calc(90vh / 9));
-    aspect-ratio: 16/9;
+    aspect-ratio: 160/99;
     margin-left: auto;
     margin-right: auto;
 }
 .projetVid h2 {
     position: relative;
     width: max-content;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%,-50%);
     font-size: 4em;
     margin: 0px;
     padding: 0px;
 }
-.projetVid iframe {
+.projetVid iframe , .projet iframe {
     position: relative;
     height: 100%;
     width: 100%;
     pointer-events: none;
     z-index: 2;
+}
+.projet iframe {
+    width: 100%;
+    height: max-content;
+    aspect-ratio: 16/9;
 }
 .description {
     padding: 50px;
@@ -138,8 +146,16 @@
     border: 1px solid currentColor;
     border-radius: 50000px;
     padding: 20px;
-    background-color: var(--3);
-    color: var(--2);
+    background-color: var(--2);
+    color: var(--3);
     z-index: 3;
-    transition: left 0.25s ease-in-out;
+    animation: retour 0.25s ease-in-out;
+}
+@keyframes retour {
+    0% {
+        left: 105vw;
+    }
+    100% {
+        left: 5vw;
+    }
 }

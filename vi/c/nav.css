@@ -2,6 +2,8 @@ body,html {
     margin: 0px;
     padding: 0px;
     overflow: hidden;
+    perspective: 1000px;
+    height: 100vh;
 }
 
 * {
@@ -10,12 +12,14 @@ body,html {
 }
 
 nav {
+    position: relative;
     height: 10vh;
     width: 100vw;
     display: flex;
     align-items: center;
     color: var(--1);
-    background-color: var(--1);
+    background-color: var(--2);
+    z-index: 10;
 }
 
 .left {
@@ -23,6 +27,7 @@ nav {
     display: flex;
     justify-content: center;
 }
+
 .right {
     width: 60%;
     display: flex;
@@ -30,13 +35,17 @@ nav {
 }
 
 .body {
+    position: fixed;
     height: 90vh;
+    width: 100vw;
+    top: 10vh;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
     background-color: var(--2);
     color: var(--3);
 }
+
 .body::-webkit-scrollbar {
     display: none;
 }
@@ -65,4 +74,40 @@ nav {
     position: fixed;
     border: 5px solid currentColor;
     transform: translate(-50%,-50%);
+}
+
+nav button {
+    background-color: var(--2);
+    color: var(--3);
+    border: 1px solid currentColor;
+    padding: 5px 10px;
+    border-radius: 8888888px;
+
+}
+
+.clickCircle {
+    position: absolute;
+    opacity: 0.5;
+    width: 0px;
+    height: 0px;
+    transition: width linear 0.5s,height linear 0.5s,opacity linear 0.5s;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 100%;
+    z-index: 5555;
+}
+
+.transitionPage {
+    position: fixed;
+    z-index: 9;
+    height: 90vh;
+    width: 100vw;
+    top: 10vh;
+    color: var(--3);
+    background-color: var(--2);
+    height: 90vh;
+    overflow: hidden;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    z-index: 8;
 }

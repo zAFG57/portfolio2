@@ -5,7 +5,7 @@
 .contact, .rotate {
     position: absolute;
     left: 50%;
-    top: 60vh;
+    top: 50vh;
     transform: translate(-50%,-50%);
     width: max-content;
 }
