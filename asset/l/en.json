@@ -1,7 +1,15 @@
 {
-    "1": "language",
+    "1": "français",
     "2": "projet",
     "3": "contact me",
     "4": "cv",
-    "5": "you can contact me through:"
+    "5": "you can contact me through:",
+    "6": "retour",
+    "7": "3Dmino est une platforme en ligne sur laquelle vous pouvez jouer à Chrominoen multijoueur dans différents modes de jeu inpiré du jeu de sociéter crée par Asmodee.<br/>Grace à ce site, vous pouvez jouer avec des chrominos de taille 3, 4 et 5, en 2 comme en 3 dimensions et avec différentes formes de chromino.",
+    "8": "algorthme de génération de pioche",
+    "9": "Projet Univercitaire",
+    "10": "Projet personelle",
+    "11": "mes-réparation.com est une platforme de mise en relation entre des particuliers ayant des objets à réparer et des réparateurs (amateur ou professionel).<br/>ainsi, ce site permet de combatre l'obsolesance prématuré tout en offrant de la visibilité au réparateur locaux et en offrant la possibiliter au personne manuelle et dégourdit de fournir d'aider autruit contre une rémunération. Ainsi, si vous avez un objet chez vous à réparer et qu'il n'est plus sous garentit comme une machine à laver, vous pouvez trouver un particulier qui possède les compétences et qui est prêt à vous aider. Vous permettant ainsi d'augmenter la durer de vie de votre électroménager à faible coup. Ce site est disponible en français commen en anglais.",
+    "12": "le but de ce projet est de crée d'obtenir un espace de stockage (en théorie) infinie. en réaliter, cela passe par l'utilisation détourner des services que propose google à travers youtube. Le concept est simple, utiliser l'espace de stockage gratuit et infinie qu'est youtube pour stocker des vidéos qui sont crée par mon programme. Ce programme chiffre les donners d'un doccument avant de l'enregistrer dans les images et le son. Ce programme permet aussi l'opération inverse (la lecture d'un telle fichier vidéo). Ce programme est donc la version moderne des QR-code.",
+    "13": "fr"
 }

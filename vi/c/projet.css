@@ -6,9 +6,10 @@
 
 .projetSec {
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     background-color: var(--bcp);
     color: var(--cp);
+    padding-bottom: 50px;
 }
 .projetSec .titre {
     position: relative;
@@ -30,9 +31,10 @@
 
 
 .projet {
+    z-index: 1;
     overflow: hidden;
     width: 500px;
-    transform: translate(50px,50px);
+    margin-top: 100px;
     aspect-ratio: 160/103;
     background-color: var(--3);
     box-shadow: 0px 0px 0px 2px currentColor;
@@ -77,7 +79,6 @@
     overflow-y: scroll;
     height: 90vh;
     width: 100vw;
-    top: 10vh;
     left: 100vw;
     transition: 0.25s left ease-in-out;
     z-index: 8;
@@ -119,6 +120,11 @@
     height: max-content;
     aspect-ratio: 16/9;
 }
+.algo img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 .description {
     padding: 50px;
     font-size: 1.5em;
@@ -158,4 +164,32 @@
     100% {
         left: 5vw;
     }
+}
+
+.page {
+    position: absolute;
+    height: 90vh;
+    width: 100vw;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+.projetSec > :nth-child(2){
+    position: relative;
+    left: 5vw;
+}
+.projetSec > :nth-child(3){
+    position: relative;
+    left: 95vw;
+    transform: translateX(-100%) translateY(calc(-100% - 100px));
+}
+.projetSec > :nth-child(4){
+    position: relative;
+    left: 50vw;
+    transform: translateX(-50%) translateY(calc(-100% - 100px));
 }

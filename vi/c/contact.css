@@ -5,16 +5,16 @@
 .contact, .rotate {
     position: absolute;
     left: 50%;
-    top: 50vh;
+    top: 40vh;
     transform: translate(-50%,-50%);
     width: max-content;
 }
 
 .rotate {
-    width: 80vw;
-    height: 80vh;
-    max-width: 80vh;
-    max-height: 80vw;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vh;
+    max-height: 100vw;
     aspect-ratio: 1/1;
     display: grid;
     animation: var(--trot) linear infinite rotation;
@@ -23,13 +23,12 @@
     align-items: center;
     pointer-events: none;
 }
-.rotate * {
+.rotate div {
     animation: var(--trot) linear infinite conterRotation;
     transform-origin: center;
     width: max-content;
     height: max-content;
     pointer-events: all;
-    padding: 40px;
 }
 #mail {
     grid-row: 1;
@@ -63,4 +62,17 @@
     100% {
         transform: rotate(-360deg);
     }
+}
+.rotate img, .rotate svg {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.st0 {
+    color: var(--3);
+    fill: currentColor;
+}
+.body {
+    overflow: hidden;
 }

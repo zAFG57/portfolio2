@@ -1,0 +1,10 @@
+[
+    {"css": "<style>:root {--1: #111; --2: #a6d1c9; --3: #e83c38;}</style>"},
+    {"css": "<style>:root {--1: #111; --2: #282b29; --3: #a6d1c9;}</style>"},
+    {"css": "<style>:root {--1: #111; --2: #f4c4c4; --3: #282b29;}</style>"},
+    {"css": "<style>:root {--1: #111; --2: #ebeded; --3: #e83c38;}</style>"},
+    {"css": "<style>:root {--1: #111; --2: #00a19a; --3: #ebeded;}</style>"},
+    {"css": "<style>:root {--1: #111; --2: #392467; --3: #A5DD9B;}</style>"},
+    {"css": "<style>:root {--1: #111; --2: #3D0000; --3: #BEADFA;}</style>"},
+    {"css": "<style>:root {--1: #111; --2: #1C0A00; --3: #7BD3EA;}</style>"}
+]

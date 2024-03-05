@@ -16,19 +16,15 @@ if(typeof d==='undefined') {
 </script>
 
 <div class="h" onclick="c()" id="retour">
-    retour
+    <?=$this->m->t["6"]?>
 </div>
 
 <section class="projetVid">
-    <h2>3DMino</h2>
+    <h2>3DMINO</h2>
 </section>
 <section class="description">
     <p>
-        3Dmino est une platforme en ligne sur laquelle vous pouvez jouer à Chromino
-        en multijoueur dans différents modes de jeu inpiré du jeu de sociéter crée 
-        par Asmodee.<br/>
-        Grace à ce site, vous pouvez jouer avec des chrominos de taille 3, 4 et 5, en
-        2 comme en 3 dimensions et avec différentes formes de chromino.
+        <?=$this->m->t["7"]?>
     </p>
 </section>
 <section class="technologie">
@@ -43,7 +39,7 @@ if(typeof d==='undefined') {
 </section>
 <section class="algo">
     <h3>
-        algorthme de génération de pioche
+        <?=$this->m->t["8"]?>
     </h3>
 </section>
 

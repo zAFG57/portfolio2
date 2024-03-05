@@ -1,4 +1,5 @@
-let nbColor =6;
+let nbColor =7;
+let last = 0;
 
 function cp(p,a) {
   if (page === p) {
@@ -70,7 +71,12 @@ function hover () {
   document.getElementById('mouselerp').style.border = 1 + 'px solid currentColor';
 }
 function rInt(max) {
-  return Math.floor(Math.random() * max);
+  let r = Math.floor(Math.random() * max);
+  while (r == last) {
+    r = Math.floor(Math.random() * max);
+  }
+  last = r;
+  return r;
 }
 document.addEventListener("click",click );
 function click(event) {
@@ -79,10 +85,10 @@ function click(event) {
   document.querySelector("body").appendChild(div);
   setTimeout(()=>{div.style.left = event.clientX + "px";div.style.top = event.clientY + "px";div.style.height = "50vh";div.style.width = "50vh";div.style.opacity = "0";},10)
   setTimeout(()=>{div.remove();},500);
-  fetch('./vi/c/json/'+(rInt(nbColor)+1)+".json").then(json => json.json()).then(data => {
-    document.querySelector("#css").innerHTML = data["css"];
+  fetch('./vi/c/json/a.json').then(json => json.json()).then(data => {
+    document.querySelector("#css").innerHTML = data[rInt(nbColor)]["css"];
   });
 }
-fetch('./vi/c/json/'+(rInt(nbColor)+1)+".json").then(json => json.json()).then(data => {
-  document.querySelector("#css").innerHTML = data["css"];
+fetch('./vi/c/json/a.json').then(json => json.json()).then(data => {
+  document.querySelector("#css").innerHTML = data[rInt(nbColor)]["css"];
 });

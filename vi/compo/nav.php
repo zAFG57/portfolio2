@@ -15,10 +15,10 @@
         </button>
     </div>
     <div class="right">
-        <button class="button h"><?=$this->m->t["1"]?></button>
+        <button class="button h" onclick="window.location='./?lang=<?=$this->m->t['13']?>'"><?=$this->m->t["1"]?></button>
         <button class="button h" onclick="cp('projet',[])"><?=$this->m->t["2"]?></button>
         <button class="button h" onclick="cp('contact',[])"><?=$this->m->t["3"]?></button>
-        <button class="button h"><?=$this->m->t["4"]?></button>
+        <button class="button h" onclick="window.location='./asset/Ludovic CASTIGLIA.pdf'"><?=$this->m->t["4"]?></button>
     </div>
 </nav>
 <script src="./vi/j/m.js"></script>

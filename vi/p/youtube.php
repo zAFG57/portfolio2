@@ -16,7 +16,7 @@ if(typeof d==='undefined') {
 </script>
 
 <div class="h" onclick="c()" id="retour">
-    retour
+    <?=$this->m->t["6"]?>
 </div>
 
 <section class="projetVid">
@@ -24,13 +24,7 @@ if(typeof d==='undefined') {
 </section>
 <section class="description">
     <p>
-        le but de ce projet est de crée d'obtenir un espace de stockage (en théorie) infinie.
-        en réaliter, cela passe par l'utilisation détourner des services que propose google à
-        travers youtube. Le concept est simple, utiliser l'espace de stockage gratuit et infinie
-        qu'est youtube pour stocker des vidéos qui sont crée par mon programme. Ce programme
-        chiffre les donners d'un doccument avant de l'enregistrer dans les images et le son.
-        Ce programme permet aussi l'opération inverse (la lecture d'un telle fichier vidéo).
-        Ce programme est donc la version moderne des QR-code.
+        <?=$this->m->t["12"]?>
     </p>
 </section>
 <section class="technologie">

@@ -4,6 +4,7 @@ function sp(p,a) {
       return;
     }
     gAPI(p,a,document.getElementById("subPage"));
+    document.getElementById("subPage").scroll(top);
     document.getElementById("subPage").style.left = "0vw";
     document.getElementById("retour").style.left = "5vw";
 }
